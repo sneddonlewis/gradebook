@@ -28,7 +28,7 @@ func startService(ctx context.Context, serviceName, host, port string) context.C
 	go func() {
 		fmt.Printf("%v started. Press any key to stop.\n", serviceName)
 		var s string
-		fmt.Scanln(&s)
+		fmt.Scan(&s)
 		srv.Shutdown(ctx)
 		cancel()
 	}()
